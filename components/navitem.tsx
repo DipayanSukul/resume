@@ -1,51 +1,34 @@
-// import Link from 'next/link';
-// import { HomeIcon, UserIcon, DocumentReportIcon, LibraryIcon, BriefcaseIcon, MailIcon } from '@heroicons/react/outline';
+import Link from 'next/link';
+import { ISidebarProps } from '../models/ISidebarProps';
+import { NavitemData } from '../data/navitemData';
+import { INavItem } from '../models/INavItem.interface';
+import { IconComponent } from './icon';
 
-export const NavItem = (): JSX.Element => {
-	return (
-		<>
-			{/* <Link href='/'>
-				<a
-					onClick={() => setToggle(!toggle)}
-					className='flex w-full items-center text-white opacity-60 border-b border-white px-10 p-4 text-sm hover:opacity-100 transition duration-200'>
-					<HomeIcon className='w-5 h-5 mr-2' /> HOME
-				</a>
-			</Link>
-			<Link href='/about'>
-				<a
-					onClick={() => setToggle(!toggle)}
-					className='flex w-full items-center text-white opacity-60 border-b border-white px-10 p-4 text-sm hover:opacity-100 transition duration-200'>
-					<UserIcon className='w-5 h-5 mr-2' /> ABOUT
-				</a>
-			</Link>
-			<Link href='/resume'>
-				<a
-					onClick={() => setToggle(!toggle)}
-					className='flex w-full items-center text-white opacity-60 border-b border-white px-10 p-4 text-sm hover:opacity-100 transition duration-200'>
-					<DocumentReportIcon className='w-5 h-5 mr-2' /> RESUME
-				</a>
-			</Link>
-			<Link href='/blog'>
-				<a
-					onClick={() => setToggle(!toggle)}
-					className='flex w-full items-center text-white opacity-60 border-b border-white px-10 p-4 text-sm hover:opacity-100 transition duration-200'>
-					<LibraryIcon className='w-5 h-5 mr-2' /> BLOG
-				</a>
-			</Link>
-			<Link href='/portfolio'>
-				<a
-					onClick={() => setToggle(!toggle)}
-					className='flex w-full items-center text-white opacity-60 border-b border-white px-10 p-4 text-sm hover:opacity-100 transition duration-200'>
-					<BriefcaseIcon className='w-5 h-5 mr-2' /> PORTFOLIO
-				</a>
-			</Link>
-			<Link href='/contact'>
-				<a
-					onClick={() => setToggle(!toggle)}
-					className='flex w-full items-center text-white opacity-60 border-b border-white px-10 p-4 text-sm hover:opacity-100 transition duration-200'>
-					<MailIcon className='w-5 h-5 mr-2' /> CONTACT
-				</a>
-			</Link> */}
-		</>
-	);
+export const NavItems: React.FC<ISidebarProps> = ({ toggle, setToggle }): JSX.Element => {
+	const navItems: INavItem[] = NavitemData;
+	const elements =
+		navItems &&
+		navItems.map((navItem: INavItem) => {
+			if (
+				navItem.name === 'Home' ||
+				navItem.name === 'About' ||
+				navItem.name === 'Contact' ||
+				navItem.name === 'Portfolio' ||
+				navItem.name === 'Blog' ||
+				navItem.name === 'Resume'
+			) {
+				return (
+					<Link href={navItem.url} key={navItem.name}>
+						<a
+							onClick={() => setToggle(!toggle)}
+							className='flex w-full items-center text-white opacity-60 border-b border-white px-10 p-4 text-sm hover:opacity-100 transition duration-200'>
+							<IconComponent name={navItem.name} className='w-5 h-5 mr-2' /> <span className='uppercase'>{navItem.name}</span>
+						</a>
+					</Link>
+				);
+			} else {
+				return <> </>;
+			}
+		});
+	return <>{elements}</>;
 };

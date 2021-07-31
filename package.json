@@ -1,0 +1,52 @@
+{
+	"name": "@dipayansukul/resume",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"check-types": "tsc --pretty --noEmit",
+		"check-format": "prettier --check .",
+		"check-lint": "eslint . --ext ts --ext tsx --ext js",
+		"format": "prettier --write .",
+		"test-all": "yarn check-format && yarn check-lint && yarn check-types && yarn build",
+		"prepare": "husky install",
+		"release": "standard-version",
+		"commit": "cz"
+	},
+	"dependencies": {
+		"@heroicons/react": "^1.0.3",
+		"next": "11.0.1",
+		"react": "17.0.2",
+		"react-dom": "17.0.2",
+		"typewriter-effect": "^2.18.0"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^13.1.0",
+		"@commitlint/config-conventional": "^13.1.0",
+		"@types/react": "^17.0.15",
+		"@typescript-eslint/eslint-plugin": "^4.28.5",
+		"@typescript-eslint/parser": "^4.28.5",
+		"autoprefixer": "^10.3.1",
+		"commitizen": "^4.2.4",
+		"cz-conventional-changelog": "^3.3.0",
+		"eslint": "^7.32.0",
+		"eslint-config-google": "^0.14.0",
+		"eslint-config-next": "11.0.1",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-react": "^7.24.0",
+		"husky": "^7.0.0",
+		"lint-staged": "^11.1.1",
+		"postcss": "^8.3.6",
+		"prettier": "2.3.2",
+		"standard-version": "^9.3.1",
+		"tailwindcss": "^2.2.7",
+		"typescript": "^4.3.5"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	}
+}

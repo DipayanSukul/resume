@@ -42,4 +42,3 @@ yarn build ||
 echo '✅✅✅✅ You win this time... I am committing this now. ✅✅✅✅'
 
 yarn lint-staged
-npx --no-install commitlint --edit "$1"

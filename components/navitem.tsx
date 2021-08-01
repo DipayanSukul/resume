@@ -24,7 +24,7 @@ export const NavItems: React.FC<ISidebarProps> = ({ toggle, setToggle }): JSX.El
 						<a
 							onClick={() => setToggle(!toggle)}
 							className={`flex w-full items-center text-white opacity-60 border-b border-white px-10 p-4 text-sm hover:opacity-100 transition duration-200 ${
-								router.pathname === navItem.url ? 'focus:opacity-100 font-extrabold' : ''
+								router.pathname === navItem.url ? 'opacity-100 font-extrabold' : ''
 							}`}>
 							<IconComponent name={navItem.name} className='w-5 h-5 mr-2' /> <span className='uppercase'>{navItem.name}</span>
 						</a>

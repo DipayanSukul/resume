@@ -1,16 +1,20 @@
-import { HomeIcon, UserIcon, DocumentReportIcon, LibraryIcon, BriefcaseIcon, MailIcon } from '@heroicons/react/outline';
+import { FaHome, FaUser, FaNewspaper, FaEnvelope, FaBriefcase, FaBook, FaLaptop, FaCog, FaDatabase, FaEye } from 'react-icons/fa';
 
 const ICON_TYPES = {
-	Home: HomeIcon,
-	About: UserIcon,
-	Resume: DocumentReportIcon,
-	Blog: LibraryIcon,
-	Portfolio: BriefcaseIcon,
-	Contact: MailIcon,
+	Home: FaHome,
+	About: FaUser,
+	Resume: FaNewspaper,
+	Blog: FaBook,
+	Portfolio: FaBriefcase,
+	Contact: FaEnvelope,
+	DesktopComputer: FaLaptop,
+	Cog: FaCog,
+	Database: FaDatabase,
+	Eye: FaEye,
 };
 
 interface IIconProps {
-	name: 'Home' | 'About' | 'Resume' | 'Blog' | 'Portfolio' | 'Contact';
+	name: 'Home' | 'About' | 'Resume' | 'Blog' | 'Portfolio' | 'Contact' | 'DesktopComputer' | 'Cog' | 'Database' | 'Eye';
 	className: string;
 }
 

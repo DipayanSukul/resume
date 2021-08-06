@@ -17,10 +17,10 @@ const Home = (): JSX.Element => {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<div className='flex justify-center items-center flex-col text-white w-full'>
-				<h1 className='text-6xl text-center font-medium break-words mb-5 tracking-wide'>
+				<h1 className='text-2xl text-center font-medium break-words mb-5 tracking-wide md:text-6xl'>
 					<span>DIPAYAN</span> <span className='text-something-blue'>SUKUL</span>
 				</h1>
-				<div className='flex flex-row text-3xl'>
+				<div className='flex flex-row text-xl md:text-3xl'>
 					<span>I am&nbsp;</span> <Typewriter options={options} />
 				</div>
 			</div>

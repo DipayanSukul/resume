@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { XIcon } from '@heroicons/react/outline';
+import { FaTimes } from 'react-icons/fa';
 import ProfilePicture from '../public/assets/images/profile.jpg';
 import React from 'react';
 import { ISidebarProps } from '../models/ISidebarProps';
@@ -14,7 +14,7 @@ export const Sidebar: React.FC<ISidebarProps> = ({ toggle, setToggle }) => {
 				<span
 					className={`absolute inset-y-0 ${toggle ? '-right-13' : 'right-13'} text-off-white bg-modern-black h-12 p-4 sm:hidden`}
 					onClick={() => setToggle(!toggle)}>
-					<XIcon className='w-5 h-5' />
+					<FaTimes className='w-5 h-5' />
 				</span>
 			</div>
 

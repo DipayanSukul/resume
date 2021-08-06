@@ -15,10 +15,10 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
 				<div
 					className={`${
 						toggle ? 'translate-x-0' : '-translate-x-full'
-					} grid grid-cols-12 fixed inset-y-0 left-0 transform duration-500 ease-in-out sm:translate-x-0 sm:static sm:block sm:col-span-2`}>
+					} grid grid-cols-12 z-50 fixed inset-y-0 left-0 transform duration-500 ease-in-out md:translate-x-0 md:static md:block md:col-span-2 md:z-0`}>
 					<Sidebar toggle={toggle} setToggle={setToggle} />
 				</div>
-				<div className='col-span-12 sm:col-span-10 mt-12 sm:mt-0'>
+				<div className='col-span-12 md:col-span-10 mt-12 md:mt-0'>
 					<Component {...pageProps} />
 				</div>
 			</div>

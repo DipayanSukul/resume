@@ -18,3 +18,9 @@
 .underline_position {
 	text-underline-position: under;
 }
+
+.custom_arrow {
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 11px solid #17181b;
+}

@@ -1,4 +1,3 @@
-import React from 'react';
 import { IPersonalInformation } from '../models/IPersonalInformation.interface';
 
 interface IPersonalInformationProps {
